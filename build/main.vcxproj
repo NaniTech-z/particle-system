@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{03754EAE-25FA-37C9-8ED7-D7BE6FD2B169}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>main</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Gpu projects\Particle System\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Gpu projects\Particle System\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Gpu projects\Particle System\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Gpu projects\Particle System\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/vcpkg/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GLFW_DLL;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLFW_DLL;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\vcpkg\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\vcpkg\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+D:\vcpkg\vcpkg\vcpkg.exe z-applocal "--target-binary=D:/Gpu projects/Particle System/build/Debug/main.exe" --installed-bin-dir=D:/vcpkg/vcpkg/installed/x64-windows/debug/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\vcpkg\vcpkg\installed\x64-windows\debug\lib\glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Gpu projects/Particle System/build/Debug/main.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Gpu projects/Particle System/build/Debug/main.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/vcpkg/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\vcpkg\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\vcpkg\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+D:\vcpkg\vcpkg\vcpkg.exe z-applocal "--target-binary=D:/Gpu projects/Particle System/build/Release/main.exe" --installed-bin-dir=D:/vcpkg/vcpkg/installed/x64-windows/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\vcpkg\vcpkg\installed\x64-windows\lib\glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Gpu projects/Particle System/build/Release/main.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Gpu projects/Particle System/build/Release/main.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/vcpkg/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\vcpkg\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\vcpkg\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+D:\vcpkg\vcpkg\vcpkg.exe z-applocal "--target-binary=D:/Gpu projects/Particle System/build/MinSizeRel/main.exe" --installed-bin-dir=D:/vcpkg/vcpkg/installed/x64-windows/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\vcpkg\vcpkg\installed\x64-windows\lib\glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Gpu projects/Particle System/build/MinSizeRel/main.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Gpu projects/Particle System/build/MinSizeRel/main.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/vcpkg/vcpkg/installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\vcpkg\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\vcpkg\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+D:\vcpkg\vcpkg\vcpkg.exe z-applocal "--target-binary=D:/Gpu projects/Particle System/build/RelWithDebInfo/main.exe" --installed-bin-dir=D:/vcpkg/vcpkg/installed/x64-windows/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\vcpkg\vcpkg\installed\x64-windows\lib\glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Gpu projects/Particle System/build/RelWithDebInfo/main.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Gpu projects/Particle System/build/RelWithDebInfo/main.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Gpu projects\Particle System\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Gpu projects/Particle System/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Cmake\bin\cmake.exe "-SD:/Gpu projects/Particle System" "-BD:/Gpu projects/Particle System/build" --check-stamp-file "D:/Gpu projects/Particle System/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Cmake\share\cmake-4.4\Modules\CMakeCXXCompiler.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeCXXCompilerABI.cpp;D:\Cmake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeCompilerIdDetection.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDependentOption.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCXXCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerABI.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerId.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerSupport.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineRCCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineSystem.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeFindBinUtils.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeFindDependencyMacro.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseLibraryArchitecture.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeRCCompiler.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeSystem.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestCXXCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestCompilerCommon.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestRCCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckCXXSourceCompiles.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckIncludeFileCXX.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckLibraryExists.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Diab-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PellesC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Renesas-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CompilerId\VS-10.vcxproj.in;D:\Cmake\share\cmake-4.4\Modules\FindPackageHandleStandardArgs.cmake;D:\Cmake\share\cmake-4.4\Modules\FindPackageMessage.cmake;D:\Cmake\share\cmake-4.4\Modules\FindThreads.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeInspectCXXLinker.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CheckSourceCompiles.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\FeatureTesting.cmake;D:\Cmake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Linker\MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-Determine-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeCXXCompiler.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeRCCompiler.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeSystem.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\vcpkg\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Gpu projects\Particle System\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Gpu projects/Particle System/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Cmake\bin\cmake.exe "-SD:/Gpu projects/Particle System" "-BD:/Gpu projects/Particle System/build" --check-stamp-file "D:/Gpu projects/Particle System/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Cmake\share\cmake-4.4\Modules\CMakeCXXCompiler.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeCXXCompilerABI.cpp;D:\Cmake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeCompilerIdDetection.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDependentOption.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCXXCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerABI.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerId.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerSupport.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineRCCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineSystem.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeFindBinUtils.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeFindDependencyMacro.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseLibraryArchitecture.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeRCCompiler.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeSystem.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestCXXCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestCompilerCommon.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestRCCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckCXXSourceCompiles.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckIncludeFileCXX.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckLibraryExists.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Diab-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PellesC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Renesas-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CompilerId\VS-10.vcxproj.in;D:\Cmake\share\cmake-4.4\Modules\FindPackageHandleStandardArgs.cmake;D:\Cmake\share\cmake-4.4\Modules\FindPackageMessage.cmake;D:\Cmake\share\cmake-4.4\Modules\FindThreads.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeInspectCXXLinker.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CheckSourceCompiles.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\FeatureTesting.cmake;D:\Cmake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Linker\MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-Determine-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeCXXCompiler.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeRCCompiler.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeSystem.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\vcpkg\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Gpu projects\Particle System\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Gpu projects/Particle System/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Cmake\bin\cmake.exe "-SD:/Gpu projects/Particle System" "-BD:/Gpu projects/Particle System/build" --check-stamp-file "D:/Gpu projects/Particle System/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Cmake\share\cmake-4.4\Modules\CMakeCXXCompiler.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeCXXCompilerABI.cpp;D:\Cmake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeCompilerIdDetection.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDependentOption.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCXXCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerABI.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerId.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerSupport.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineRCCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineSystem.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeFindBinUtils.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeFindDependencyMacro.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseLibraryArchitecture.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeRCCompiler.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeSystem.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestCXXCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestCompilerCommon.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestRCCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckCXXSourceCompiles.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckIncludeFileCXX.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckLibraryExists.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Diab-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PellesC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Renesas-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CompilerId\VS-10.vcxproj.in;D:\Cmake\share\cmake-4.4\Modules\FindPackageHandleStandardArgs.cmake;D:\Cmake\share\cmake-4.4\Modules\FindPackageMessage.cmake;D:\Cmake\share\cmake-4.4\Modules\FindThreads.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeInspectCXXLinker.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CheckSourceCompiles.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\FeatureTesting.cmake;D:\Cmake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Linker\MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-Determine-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeCXXCompiler.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeRCCompiler.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeSystem.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\vcpkg\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Gpu projects\Particle System\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Gpu projects/Particle System/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Cmake\bin\cmake.exe "-SD:/Gpu projects/Particle System" "-BD:/Gpu projects/Particle System/build" --check-stamp-file "D:/Gpu projects/Particle System/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Cmake\share\cmake-4.4\Modules\CMakeCXXCompiler.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeCXXCompilerABI.cpp;D:\Cmake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeCompilerIdDetection.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDependentOption.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCXXCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerABI.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerId.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineCompilerSupport.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineRCCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeDetermineSystem.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeFindBinUtils.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeFindDependencyMacro.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeParseLibraryArchitecture.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeRCCompiler.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeRCInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeSystem.cmake.in;D:\Cmake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestCXXCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestCompilerCommon.cmake;D:\Cmake\share\cmake-4.4\Modules\CMakeTestRCCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckCXXSourceCompiles.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckIncludeFileCXX.cmake;D:\Cmake\share\cmake-4.4\Modules\CheckLibraryExists.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Diab-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\PellesC-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Renesas-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\Cmake\share\cmake-4.4\Modules\CompilerId\VS-10.vcxproj.in;D:\Cmake\share\cmake-4.4\Modules\FindPackageHandleStandardArgs.cmake;D:\Cmake\share\cmake-4.4\Modules\FindPackageMessage.cmake;D:\Cmake\share\cmake-4.4\Modules\FindThreads.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CMakeInspectCXXLinker.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\CheckSourceCompiles.cmake;D:\Cmake\share\cmake-4.4\Modules\Internal\FeatureTesting.cmake;D:\Cmake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Linker\MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-Determine-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\Windows.cmake;D:\Cmake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeCXXCompiler.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeRCCompiler.cmake;D:\Gpu projects\Particle System\build\CMakeFiles\4.4.0-rc3\CMakeSystem.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\vcpkg\vcpkg\installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\vcpkg\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Gpu projects\Particle System\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Gpu projects\Particle System\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\Gpu projects\Particle System\build\ZERO_CHECK.vcxproj">
+      <Project>{89E23663-139D-312A-A7D9-F46F64C0073A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

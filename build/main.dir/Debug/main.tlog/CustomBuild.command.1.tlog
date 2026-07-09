@@ -1,0 +1,10 @@
+^D:\GPU PROJECTS\PARTICLE SYSTEM\CMAKELISTS.TXT
+setlocal
+D:\Cmake\bin\cmake.exe "-SD:/Gpu projects/Particle System" "-BD:/Gpu projects/Particle System/build" --check-stamp-file "D:/Gpu projects/Particle System/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
