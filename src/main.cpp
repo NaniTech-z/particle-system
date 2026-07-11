@@ -1,34 +1,23 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
-
+#include "Application.hpp"
 using namespace std;
 
 int main() {
+    Application app;
+    int width, height;
+    cout << "Input width of window: ";
+    cin >> width;
+    cout << "Input height of window: ";
+    cin >> height;
+    app.setWindowSize(width, height);
 
-    if (!glfwInit()) {
-        cout << "GLFW can't start" << endl;
+    if(!app.initialize())
         return -1;
-    }
 
-    GLFWwindow* window = glfwCreateWindow(640, 480, "Simulation", NULL, NULL);
+    app.run();
 
-    if (!window) {
-        cout << "Window creation failed" << endl;
-        glfwTerminate();
-        return -1;
-    }
-
-    glfwMakeContextCurrent(window);
-
-    while (!glfwWindowShouldClose(window)) {
-
-        glfwPollEvents();
-
-        glfwSwapBuffers(window);
-    }
-
-    glfwDestroyWindow(window);
-    glfwTerminate();
+    app.shutdown();
 
     return 0;
 }
