@@ -7,6 +7,12 @@
     <ClCompile Include="D:\Gpu projects\Particle System\src\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Gpu projects\Particle System\src\ParticleSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Gpu projects\Particle System\src\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\Gpu projects\Particle System\CMakeLists.txt" />

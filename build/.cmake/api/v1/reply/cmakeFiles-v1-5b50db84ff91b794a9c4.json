@@ -233,6 +233,26 @@
 		{
 			"isExternal" : true,
 			"path" : "D:/vcpkg/vcpkg/installed/x64-windows/share/glfw3/glfw3Targets-release.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/vcpkg/vcpkg/installed/x64-windows/share/glad/gladConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/vcpkg/vcpkg/installed/x64-windows/share/glad/gladConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/vcpkg/vcpkg/installed/x64-windows/share/glad/gladTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/vcpkg/vcpkg/installed/x64-windows/share/glad/gladTargets-debug.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/vcpkg/vcpkg/installed/x64-windows/share/glad/gladTargets-release.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",

@@ -13,6 +13,13 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "glad::glad::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-glad__glad-Debug-8ac2140de104b8aa00a4.json",
+					"name" : "glad::glad",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "glfw::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-glfw-Debug-b14c2d57f7e77c02ec91.json",
 					"name" : "glfw",
@@ -25,7 +32,8 @@
 					"abstractTargetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"build" : ".",
 					"jsonFile" : "directory-.-Debug-b5805d5c08fd3d92def4.json",
@@ -50,7 +58,8 @@
 					"abstractTargetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -84,7 +93,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-f16b14cd892eb5379d2b.json",
+					"jsonFile" : "target-main-Debug-fe3960f9332c9e1d1dc4.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}
@@ -102,6 +111,13 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "glad::glad::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-glad__glad-Release-05169f094bfeb70c1d8f.json",
+					"name" : "glad::glad",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "glfw::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-glfw-Release-d527cf34e2e4efc81b6f.json",
 					"name" : "glfw",
@@ -114,7 +130,8 @@
 					"abstractTargetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"build" : ".",
 					"jsonFile" : "directory-.-Release-b5805d5c08fd3d92def4.json",
@@ -139,7 +156,8 @@
 					"abstractTargetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -173,7 +191,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Release-f7145b328fdb3a0f7624.json",
+					"jsonFile" : "target-main-Release-b0f4ae8dddedaf41ba55.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}
@@ -191,6 +209,13 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "glad::glad::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-glad__glad-MinSizeRel-05169f094bfeb70c1d8f.json",
+					"name" : "glad::glad",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "glfw::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-glfw-MinSizeRel-d527cf34e2e4efc81b6f.json",
 					"name" : "glfw",
@@ -203,7 +228,8 @@
 					"abstractTargetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"build" : ".",
 					"jsonFile" : "directory-.-MinSizeRel-b5805d5c08fd3d92def4.json",
@@ -228,7 +254,8 @@
 					"abstractTargetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -262,7 +289,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-MinSizeRel-53937af9c7a054944fd5.json",
+					"jsonFile" : "target-main-MinSizeRel-0431ace8c224e9794849.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}
@@ -280,6 +307,13 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "glad::glad::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-glad__glad-RelWithDebInfo-05169f094bfeb70c1d8f.json",
+					"name" : "glad::glad",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "glfw::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-glfw-RelWithDebInfo-d527cf34e2e4efc81b6f.json",
 					"name" : "glfw",
@@ -292,7 +326,8 @@
 					"abstractTargetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"build" : ".",
 					"jsonFile" : "directory-.-RelWithDebInfo-b5805d5c08fd3d92def4.json",
@@ -317,7 +352,8 @@
 					"abstractTargetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -351,7 +387,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-RelWithDebInfo-abeea2708b9c7288a624.json",
+					"jsonFile" : "target-main-RelWithDebInfo-5df6c460f8bbda1e0876.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}

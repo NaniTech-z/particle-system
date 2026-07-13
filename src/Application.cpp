@@ -1,6 +1,8 @@
-#include "Application.hpp"
 #include <iostream>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include "Application.hpp"
+#include "Renderer.hpp"
 using namespace std;
 
 Application::Application() {
@@ -25,6 +27,12 @@ bool Application::initialize() {
     }
 
     glfwMakeContextCurrent(window);
+
+    // gets the addresses of all openGL functions on this computer.
+    gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+
+    
+    renderer.initialize();
     return true;
 }
 
@@ -34,9 +42,9 @@ void Application::run() {
 
         glfwPollEvents();
 
-        //update()
+        // update()
 
-        //render();
+        renderer.render();
 
         glfwSwapBuffers(window);
     }
