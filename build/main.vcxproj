@@ -126,9 +126,18 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
 D:\vcpkg\vcpkg\vcpkg.exe z-applocal "--target-binary=D:/Gpu projects/Particle System/build/Debug/main.exe" --installed-bin-dir=D:/vcpkg/vcpkg/installed/x64-windows/debug/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Cmake\bin\cmake.exe -E copy_directory "D:/Gpu projects/Particle System/shaders" "D:/Gpu projects/Particle System/build/Debug/shaders"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -200,9 +209,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
 D:\vcpkg\vcpkg\vcpkg.exe z-applocal "--target-binary=D:/Gpu projects/Particle System/build/Release/main.exe" --installed-bin-dir=D:/vcpkg/vcpkg/installed/x64-windows/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Cmake\bin\cmake.exe -E copy_directory "D:/Gpu projects/Particle System/shaders" "D:/Gpu projects/Particle System/build/Release/shaders"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -274,9 +292,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
 D:\vcpkg\vcpkg\vcpkg.exe z-applocal "--target-binary=D:/Gpu projects/Particle System/build/MinSizeRel/main.exe" --installed-bin-dir=D:/vcpkg/vcpkg/installed/x64-windows/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Cmake\bin\cmake.exe -E copy_directory "D:/Gpu projects/Particle System/shaders" "D:/Gpu projects/Particle System/build/MinSizeRel/shaders"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -347,9 +374,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
 D:\vcpkg\vcpkg\vcpkg.exe z-applocal "--target-binary=D:/Gpu projects/Particle System/build/RelWithDebInfo/main.exe" --installed-bin-dir=D:/vcpkg/vcpkg/installed/x64-windows/bin
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\Cmake\bin\cmake.exe -E copy_directory "D:/Gpu projects/Particle System/shaders" "D:/Gpu projects/Particle System/build/RelWithDebInfo/shaders"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

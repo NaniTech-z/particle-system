@@ -51,8 +51,11 @@ void Application::run() {
 }
 
 void Application::shutdown() {
+    renderer.shutdown();
     glfwDestroyWindow(window);
     glfwTerminate();
+    window = nullptr;
+    isRunning = false;
 }
 
 void Application::setWindowSize(int width, int height) {

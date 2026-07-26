@@ -15,7 +15,7 @@ class Application {
         void setWindowSize(int width, int height);
 
     private:
-        GLFWwindow* window;
+        GLFWwindow* window = nullptr;
         Renderer renderer;
         ParticleSystem particleSystem;
         bool isRunning;
