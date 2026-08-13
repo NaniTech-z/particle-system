@@ -18,6 +18,7 @@ D:/Cmake/share/cmake-4.4/Modules/Compiler/MSVC-CXX.cmake
 D:/Cmake/share/cmake-4.4/Modules/Compiler/MSVC.cmake
 D:/Cmake/share/cmake-4.4/Modules/Compiler/NVIDIA-CUDA.cmake
 D:/Cmake/share/cmake-4.4/Modules/Compiler/NVIDIA.cmake
+D:/Cmake/share/cmake-4.4/Modules/FindCUDAToolkit.cmake
 D:/Cmake/share/cmake-4.4/Modules/FindPackageHandleStandardArgs.cmake
 D:/Cmake/share/cmake-4.4/Modules/FindPackageMessage.cmake
 D:/Cmake/share/cmake-4.4/Modules/FindThreads.cmake

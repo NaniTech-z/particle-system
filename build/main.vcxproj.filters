@@ -15,6 +15,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <CudaCompile Include="..\cuda\particle_emit.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\cuda\particle_kernels.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="D:\Gpu projects\Particle System\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>

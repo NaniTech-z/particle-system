@@ -18,6 +18,7 @@ class Application {
         GLFWwindow* window = nullptr;
         Renderer renderer;
         ParticleSystem particleSystem;
+        float previousTime = 0.0f;
         bool isRunning;
         int windowWidth;
         int windowHeight;

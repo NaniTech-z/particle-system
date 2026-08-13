@@ -4,8 +4,11 @@
 #include <sstream>
 #include <iostream>
 #include <string>
+#include <cuda_runtime.h>
+#include <cuda_gl_interop.h>
 #include "Renderer.hpp"
 using namespace std;
+// reminder to actually comment everything on this file
 
 static std::string readShaderFile(const char* filePath)
 {
@@ -25,9 +28,7 @@ static std::string readShaderFile(const char* filePath)
     return stream.str();
 }
 
-static unsigned int compileShader(
-    unsigned int shaderType,
-    const char* source)
+static unsigned int compileShader(unsigned int shaderType, const char* source)
 {
     unsigned int shader = glCreateShader(shaderType);
 
@@ -155,33 +156,24 @@ static unsigned int createShaderProgram()
 }
 
 // creates shaders, VAO (vertex array object), VBO (vertex buffer object)
-bool Renderer::initialize() {
+bool Renderer::initialize(size_t particleCount) {
+
     glGenVertexArrays(1, &vao);
     glGenBuffers(1, &vbo);
-
-    // temporary particle at origin
-    float particle[] = {
-        0.0f, 0.0f, 0.0f
-    };
 
     glBindVertexArray(vao);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
-    glBufferData(
-        GL_ARRAY_BUFFER,
-        sizeof(particle),
-        particle,
-        GL_STATIC_DRAW
-    );
+    glBufferData(GL_ARRAY_BUFFER, particleCount*sizeof(float3), nullptr, GL_DYNAMIC_DRAW);
 
-    glVertexAttribPointer(
-        0,
-        3,
-        GL_FLOAT,
-        GL_FALSE,
-        3*sizeof(float),
-        (void*)0
-    );
+    cudaError_t error = cudaGraphicsGLRegisterBuffer(&cudaVBO, vbo, cudaGraphicsRegisterFlagsWriteDiscard);
+
+    if (error != cudaSuccess) {
+        cout << "Failed to register VBO with cuda: " << cudaGetErrorString(error) << endl;
+        return false;
+    }
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(float), (void*)0);
 
     glEnableVertexAttribArray(0);
 
@@ -192,20 +184,61 @@ bool Renderer::initialize() {
         return false;
     }
 
-    glPointSize(10.0f);
+    glPointSize(2.0f);
 
     return true;
 }
 
-void Renderer::render() {
+void Renderer::render(size_t particleCount) {
     glClear(GL_COLOR_BUFFER_BIT);
     glUseProgram(shaderProgram);
     glBindVertexArray(vao);
-    glDrawArrays(GL_POINTS, 0, 1);
+    glDrawArrays(GL_POINTS, 0, static_cast<GLsizei>(particleCount));
 }
 
 void Renderer::shutdown() {
+    if (cudaVBO != nullptr) {
+        cudaGraphicsUnregisterResource(cudaVBO);
+        cudaVBO = nullptr;
+    }
+
     glDeleteVertexArrays(1, &vao);
     glDeleteBuffers(1, &vbo);
     glDeleteProgram(shaderProgram);
+}
+
+float3* Renderer::beginParticleUpdate() {
+
+    cudaError_t error;
+
+    // cuda asking permission from OpenGL to modify VBO
+    error = cudaGraphicsMapResources(1, &cudaVBO, 0);
+
+    if (error != cudaSuccess) {
+        cerr << "Failed to map VBO: " << cudaGetErrorString(error) << "\n";
+        return nullptr;
+    }
+    float3* mappedPositions = nullptr;
+    size_t size = 0;
+
+    // Since CUDA knows that there is a VBO it needs to find it with this line
+    error = cudaGraphicsResourceGetMappedPointer(reinterpret_cast<void**>(&mappedPositions), &size, cudaVBO);
+
+    if (error != cudaSuccess) {
+        cerr << "Failed to get mapped pointer: " << cudaGetErrorString(error);
+        cudaGraphicsUnmapResources(1, &cudaVBO, 0);
+        return nullptr;
+    }
+
+    if (mappedPositions == nullptr) {
+        cerr << "Mapped VBO pointer is nullptr\n";
+        cudaGraphicsUnmapResources(1, &cudaVBO, 0);
+        return nullptr;
+    }
+    return mappedPositions;
+}
+
+// function that tells OpenGL that cuda is done and that OpenGL can use the updated particles
+void Renderer::endParticleUpdate() {
+    cudaGraphicsUnmapResources(1, &cudaVBO, 0);
 }
