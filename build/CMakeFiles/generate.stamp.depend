@@ -50,4 +50,8 @@ D:/vcpkg/vcpkg/installed/x64-windows/share/glfw3/glfw3ConfigVersion.cmake
 D:/vcpkg/vcpkg/installed/x64-windows/share/glfw3/glfw3Targets-debug.cmake
 D:/vcpkg/vcpkg/installed/x64-windows/share/glfw3/glfw3Targets-release.cmake
 D:/vcpkg/vcpkg/installed/x64-windows/share/glfw3/glfw3Targets.cmake
+D:/vcpkg/vcpkg/installed/x64-windows/share/glm/glmConfig-debug.cmake
+D:/vcpkg/vcpkg/installed/x64-windows/share/glm/glmConfig-release.cmake
+D:/vcpkg/vcpkg/installed/x64-windows/share/glm/glmConfig.cmake
+D:/vcpkg/vcpkg/installed/x64-windows/share/glm/glmConfigVersion.cmake
 D:/vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake

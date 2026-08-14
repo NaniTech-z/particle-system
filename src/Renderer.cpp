@@ -6,6 +6,7 @@
 #include <string>
 #include <cuda_runtime.h>
 #include <cuda_gl_interop.h>
+#include <glm/gtc/type_ptr.hpp>
 #include "Renderer.hpp"
 using namespace std;
 // reminder to actually comment everything on this file
@@ -184,14 +185,21 @@ bool Renderer::initialize(size_t particleCount) {
         return false;
     }
 
-    glPointSize(2.0f);
+    viewLocation = glGetUniformLocation(shaderProgram, "view");
+    projectionLocation = glGetUniformLocation(shaderProgram, "projection");
+
+    glPointSize(5.0f);
 
     return true;
 }
 
-void Renderer::render(size_t particleCount) {
+void Renderer::render(size_t particleCount, const glm::mat4& view, const glm::mat4& projection) {
     glClear(GL_COLOR_BUFFER_BIT);
     glUseProgram(shaderProgram);
+
+    glUniformMatrix4fv(viewLocation, 1, GL_FALSE, glm::value_ptr(view));
+    glUniformMatrix4fv(projectionLocation, 1, GL_FALSE, glm::value_ptr(projection));
+
     glBindVertexArray(vao);
     glDrawArrays(GL_POINTS, 0, static_cast<GLsizei>(particleCount));
 }

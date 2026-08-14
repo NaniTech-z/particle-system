@@ -3,6 +3,7 @@
 #include <GLFW/glfw3.h>
 #include "Application.hpp"
 #include "Renderer.hpp"
+#include "Timer.hpp"
 #include <cuda_runtime.h>
 #include <cuda_gl_interop.h>
 using namespace std;
@@ -13,6 +14,11 @@ Application::Application() {
     isRunning = false;
     windowWidth = 640;
     windowHeight = 480;
+
+    lastMouseX = windowWidth / 2.0;
+    lastMouseY = windowHeight / 2.0;
+
+    firstMouse = true;
 }
 
 // initilize application function
@@ -80,18 +86,78 @@ void Application::run() {
     isRunning = true;
 
     // get previous time so that we can tell how much time passes between each frame
-    float previousTime = glfwGetTime();
+    
 
     while (isRunning && !glfwWindowShouldClose(window)) {
 
         // calculate the change in time between frames by getting current time and subtracting to prev
-        float currentTime = glfwGetTime();
-        float deltaTime = currentTime - previousTime;
-        previousTime = currentTime;
+        timer.update();
+        float deltaTime = timer.getDeltaTime();
 
+        if (deltaTime > 0.033f)
+            deltaTime = 0.033f;
 
         // poll events (keyboard inputs, changing window size, and more)
         glfwPollEvents();
+
+        // process mouse input when left click mouse is held
+        if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
+
+            // hide cursor
+            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+            double mouseX, mouseY;
+
+            glfwGetCursorPos(window, &mouseX, &mouseY);
+
+            if(firstMouse) {
+                lastMouseX = mouseX;
+                lastMouseY = mouseY;
+                firstMouse = false;
+            }
+
+            float xOffset = static_cast<float>(mouseX - lastMouseX);
+            // screen coordinates increase downward so subtracting the 
+            // lastMouseY with mouseY is positive mouse movement
+            float yOffset = static_cast<float>(lastMouseY - mouseY); 
+
+            lastMouseX = mouseX;
+            lastMouseY = mouseY;
+
+            camera.processMouse(xOffset, yOffset);
+        } else {
+            // show cursor
+            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+            
+            // firstMouse back to true so that the camera doesn't move randomly
+            // the next time left mouse click is pressed.
+            firstMouse = true;
+        }
+
+        // process camera input
+        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+            camera.processKeyboard(CameraMovement::Forward, deltaTime);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+            camera.processKeyboard(CameraMovement::Backward, deltaTime);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+            camera.processKeyboard(CameraMovement::Left, deltaTime);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+            camera.processKeyboard(CameraMovement::Right, deltaTime);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
+            camera.processKeyboard(CameraMovement::Up, deltaTime);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) {
+            camera.processKeyboard(CameraMovement::Down, deltaTime);
+        }
 
         // create the positions pointer for the renderer
         float3* positions = renderer.beginParticleUpdate();
@@ -107,8 +173,12 @@ void Application::run() {
         // updated particle can be used by opengl now
         renderer.endParticleUpdate();
 
+        glm::mat4 view = camera.getViewMatrix();
+        glm::mat4 projection = camera.getProjectionMatrix(static_cast<float>(windowWidth)/
+                                                          static_cast<float>(windowHeight));
+        
         // render the system
-        renderer.render(particleSystem.getParticleCount());
+        renderer.render(particleSystem.getParticleCount(), view, projection);
 
         /* swaps buffers front buffer is current image on screen
             back buffer is the image drawn during rendering 

@@ -7,22 +7,36 @@ __global__ void updateParticles(float3* positions, float3* velocities, float del
     if (index >= particleCount)
         return;
     
-    const float gravity = -0.5f;
-    // change y velocity due to gravity
+    // physics constants
+    const float gravity = -1.0f;
+    const float restitution = 0.7f;
+    const float drag = 0.05f;
+    const float friction = 0.8f;
+    const float floorY = -0.5f;
+
+    // Apply gravity
     velocities[index].y += gravity * deltaTime;
 
-    // change the positions over time with velocity
+    // Apply air drag
+    velocities[index].x -= velocities[index].x * drag * deltaTime;
+    velocities[index].y -= velocities[index].y * drag * deltaTime;
+    velocities[index].z -= velocities[index].z * drag * deltaTime;
+
+    // Update the positions
     positions[index].x += velocities[index].x * deltaTime;
     positions[index].y += velocities[index].y * deltaTime;
+    positions[index].z += velocities[index].z * deltaTime;
 
-    // create a boundary so the particles don't go off screen
-    if (positions[index].y < -1.0f) {
+    // Handle floor collision
+    if (positions[index].y < floorY) {
+        positions[index].y = floorY;
 
-        positions[index].y = -1.0f;
-        
-        // Multiply by -0.8f because it is the coefficient of restitution 
-        // In other words it makes the particle bounce off the ground and slowly settles
-        velocities[index].y *= -0.8f;
+        // Bounce off the floor
+        velocities[index].y *= -restitution;
+
+        // add friction
+        velocities[index].x *= friction;
+        velocities[index].z *= friction;
     }
 };
 

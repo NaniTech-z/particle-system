@@ -2,6 +2,8 @@
 #include <GLFW/glfw3.h>
 #include "ParticleSystem.hpp"
 #include "Renderer.hpp"
+#include "Camera.hpp"
+#include "Timer.hpp"
 using namespace std;
 
 class Application {
@@ -18,7 +20,11 @@ class Application {
         GLFWwindow* window = nullptr;
         Renderer renderer;
         ParticleSystem particleSystem;
-        float previousTime = 0.0f;
+        Camera camera;
+        double lastMouseX;
+        double lastMouseY;
+        bool firstMouse;
+        Timer timer;
         bool isRunning;
         int windowWidth;
         int windowHeight;

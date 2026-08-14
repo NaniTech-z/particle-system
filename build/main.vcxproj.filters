@@ -13,6 +13,12 @@
     <ClCompile Include="D:\Gpu projects\Particle System\src\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Gpu projects\Particle System\src\camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Gpu projects\Particle System\src\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="..\cuda\particle_emit.cu">

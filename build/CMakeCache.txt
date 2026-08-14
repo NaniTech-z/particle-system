@@ -510,6 +510,9 @@ glad_DIR:PATH=D:/vcpkg/vcpkg/installed/x64-windows/share/glad
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=D:/vcpkg/vcpkg/installed/x64-windows/share/glfw3
 
+//The directory containing a CMake configuration file for glm.
+glm_DIR:PATH=D:/vcpkg/vcpkg/installed/x64-windows/share/glm
+
 //Value Computed by CMake
 particle_system_BINARY_DIR:STATIC=D:/Gpu projects/Particle System/build
 

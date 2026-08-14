@@ -8,12 +8,15 @@ set(CMAKE_CUDA_STANDARD 17)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(CUDAToolkit REQUIRED)
+find_package(glm REQUIRED)
 
 add_executable(main 
     src/main.cpp
     src/Application.cpp
     src/ParticleSystem.cpp
     src/Renderer.cpp
+    src/camera.cpp
+    src/Timer.cpp
 
     cuda/particle_emit.cu
     cuda/particle_kernels.cu
@@ -28,6 +31,7 @@ target_link_libraries(main PRIVATE
     glfw
     glad::glad
     CUDA::cudart
+    glm
 )
 
 add_custom_command(TARGET main POST_BUILD

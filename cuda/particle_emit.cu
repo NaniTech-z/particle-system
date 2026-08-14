@@ -6,12 +6,18 @@ __global__ void initializeParticles(float3* positions, float3* velocities, size_
     if (index >= particleCount)
         return;
     
-    float x = (index % 50) * 0.02f - 0.5f;
-    float y = (index / 50) * 0.02f - 0.2f;
+    // creating initial positions for each particle
+    float x = ((index % 20) * 0.02f) - 0.2f;
+    float y = ((index / 20) * 0.02f) + 0.2f;
 
     positions[index] = make_float3(x, y, 0.0f);
 
-    velocities[index] = make_float3(0.0f, 0.0f, 0.0f);
+    // randomizing initial velocities
+    float vx = ((index % 10) - 5) * 0.1f;
+    float vy = ((index % 7) - 3) * 0.15f;
+    float vz = ((index % 5) - 2) * 0.1f;
+
+    velocities[index] = make_float3(vx, vy, vz);
 }
 
 void launchInitializeParticles(float3* positions, float3* velocities, size_t particleCount) {
